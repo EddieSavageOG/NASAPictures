@@ -1,9 +1,20 @@
-
+//Example fetch using pokemonapi.co
 document.querySelector('button').addEventListener('click', getFetch)
 
 function getFetch(){
   const choice = document.querySelector('input').value
-  console.log(choice)
+
+  let today = new Date();
+  if (today < Date.parse(choice)) {
+    console.log("No!")
+    document.querySelector('h4').style.display = "initial"
+    document.querySelector('h4').innerText = "That is a future date! Please choose another.";
+  }
+  if (today >= Date.parse(choice)) {
+    console.log("yes!")
+    document.querySelector('h4').style.display = "none"
+
+
 
   const url = `https://api.nasa.gov/planetary/apod?api_key=utSrcGjneqgVosQrxHGeKuFeSRbzvcPoxqodo2xb&date=${choice}`
   
@@ -25,7 +36,7 @@ function getFetch(){
 
         document.querySelector('h2').innerText = data.title;
         document.querySelector('h3').innerText = data.explanation;
-        if (data.copyright) {
+        if (!data.copyright) {
           document.querySelector('h5').innerText = data.copyright;
           document.querySelector('h5').style.visibility = "visible";
         }else{
@@ -34,6 +45,11 @@ function getFetch(){
       })
       .catch(err => {
           console.log(`error ${err}`);
-      });
+      });}
+// }else{
+//   document.querySelector('h2').innerText = "That's the future! Please choose again."
+//   document.querySelector('h2').style.visibility = "visible"
+
+// }
 }
 
