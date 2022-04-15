@@ -27,7 +27,7 @@ header {
 
 h2, h3, h5 {
   visibility: hidden;
-  padding: 0 2%;
+  padding: 0 5%;
 }
 
 iframe {
@@ -63,11 +63,4 @@ img{
 /*******************************************/
 
 
-@media screen and(max-width: 460px) {
-  .header h1 {
-    font-size: 100px;
-  }
-  button {
-    font-size: 3em;
-  }
-}
+
