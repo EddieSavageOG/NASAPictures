@@ -26,6 +26,7 @@ header {
 
 h2, h3, h5 {
   visibility: hidden;
+  padding: 0 2%;
 }
 
 iframe {
@@ -59,3 +60,10 @@ img{
 /******************************************
 /* ADDITIONAL STYLES
 /*******************************************/
+
+
+@media screen {
+  .header {
+    font-size: 3em;
+  }
+}
