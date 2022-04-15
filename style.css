@@ -63,7 +63,7 @@ img{
 /*******************************************/
 
 
-@media screen {
+@media screen and (max-width: 460px) {
   .header {
     font-size: 3em;
   }
