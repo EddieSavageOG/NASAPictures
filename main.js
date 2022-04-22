@@ -1,4 +1,4 @@
-//Example fetch using pokemonapi.co
+
 document.querySelector('button').addEventListener('click', getFetch)
 
 function getFetch(){
@@ -46,10 +46,8 @@ function getFetch(){
       .catch(err => {
           console.log(`error ${err}`);
       });}
-// }else{
-//   document.querySelector('h2').innerText = "That's the future! Please choose again."
-//   document.querySelector('h2').style.visibility = "visible"
 
-// }
 }
 
+
+document.getElementById('datePickerID').max = new Date().toLocaleDateString('en-ca');
