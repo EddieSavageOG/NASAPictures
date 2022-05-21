@@ -6,12 +6,10 @@ function getFetch(){
 
   let today = new Date();
   if (today < Date.parse(choice)) {
-    console.log("No!")
     document.querySelector('h4').style.display = "initial"
     document.querySelector('h4').innerText = "That is a future date! Please choose another.";
   }
   if (today >= Date.parse(choice)) {
-    console.log("yes!")
     document.querySelector('h4').style.display = "none"
 
 
