@@ -37,7 +37,7 @@ function getFetch(){
         document.querySelector('h2').innerText = data.title;
         document.querySelector('h3').innerText = data.explanation;
         if (data.copyright) {
-          document.querySelector('h5').innerText = data.copyright;
+          document.querySelector('h5').innerText = "Artist: " + data.copyright;
           document.querySelector('h5').style.visibility = "visible";
         }else{
           document.querySelector('h5').style.visibility = "hidden";
