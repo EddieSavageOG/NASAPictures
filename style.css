@@ -39,7 +39,7 @@ iframe {
 
 .selection {
   display: block;
-  padding-top: 2%;
+  margin: auto 0;
 }
 
 
@@ -78,3 +78,9 @@ a {
 /* ADDITIONAL STYLES
 /*******************************************/
 
+@media screen and (max-width: 656px) {
+  header {
+    flex-direction: column;
+    text-align: center;
+  }
+}
